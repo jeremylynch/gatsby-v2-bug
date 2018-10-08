@@ -18,9 +18,9 @@ exports.createPages = (
     filters
   }
 ) => {
-  function createPageWithResults(type, response, state, templatePath) {
+  function createPageWithResults(type, templatePath) {
     actions.createPage({
-      path: `${type}-cars`,
+      path: 'cars',
       component: templatePath,
       context: {
         car_type: 'test',
@@ -46,16 +46,9 @@ exports.createPages = (
   });
 
   return new Promise((resolve, reject) => {
-    const templatePath = path.resolve(template);
+    const templatePath = path.resolve('src/pages/page-2.js');
     pages.map((type) => {
-      let typeParams = Object.assign({}, search_params[0], {params: {
-        hitsPerPage: hitsPerPage,
-        filters: "dealer_3",
-        facets: facets
-      }})
-      client.search([typeParams]).then(response => {
-        createPageWithResults(type, response, state, templatePath)
-      })
+      createPageWithResults(type, templatePath)
     })
     resolve()
   })

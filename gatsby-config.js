@@ -26,7 +26,7 @@ module.exports = {
         facets: ['make', 'colour', 'price', 'year'],
         hitsPerPage: 21,
         pages: ['new', 'used', 'demo'],
-        template: 'src/dealer-shared/templates/carsIndex.js'
+        template: 'src/components/carsIndex.js'
       }
     },
   ],
