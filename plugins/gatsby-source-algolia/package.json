@@ -1,0 +1,21 @@
+{
+  "name": "gatsby-source-algolia",
+  "version": "1.0.0",
+  "description": "SSR for algolia instantsearch",
+  "main": "gatsby-node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "algolia",
+    "gatsby",
+    "react",
+    "instantsearch"
+  ],
+  "author": "Jeremy Lynch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremylynch/gatsby-source-algolia/issues"
+  },
+  "homepage": "https://github.com/jeremylynch/gatsby-source-algolia#readme"
+}

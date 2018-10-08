@@ -17,5 +17,17 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-algolia',
+      options: {
+        appId: 'A8AA6VFYQ9',
+        apiKey: '52c14cf75c582fbc28aa2ce96c65d0fc',
+        index: 'Car_production',
+        facets: ['make', 'colour', 'price', 'year'],
+        hitsPerPage: 21,
+        pages: ['new', 'used', 'demo'],
+        template: 'src/dealer-shared/templates/carsIndex.js'
+      }
+    },
   ],
 }
